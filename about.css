@@ -1,0 +1,155 @@
+/* About section enhancements */
+.about {
+  padding: 120px 0;
+  background: var(--color-background);
+}
+
+.about h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-content {
+  position: relative;
+}
+
+.about-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.about-content p {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.about-image:hover img {
+  transform: translate(20px, 20px);
+}
+
+/* Candidates Section */
+.candidates {
+  padding: 6rem 0;
+  background: var(--bg-light);
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.candidate-card {
+  background: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+}
+
+.candidate-header {
+  position: relative;
+}
+
+.candidate-header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.candidate-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: var(--white);
+}
+
+.candidate-card blockquote {
+  padding: 1.5rem;
+  font-style: italic;
+  color: var(--primary);
+  border-left: 4px solid var(--accent);
+  margin: 1.5rem;
+}
+
+.candidate-card .bio {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  padding: 1.5rem;
+  background: var(--bg-light);
+}
+
+.achievements h4 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.achievements ul {
+  list-style: none;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievements li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
